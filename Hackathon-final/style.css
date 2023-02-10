@@ -75,12 +75,12 @@ html {
     font-weight: 600;
     color: var(--black);
     display: block;
-    transition: 300ms;
+    /* transition: 500ms; */
 }
 
 #navItems a:hover {
-    opacity: .8;
-    font-weight: 600;
+    opacity: .7;
+    font-weight: 700;
 }
 
 
@@ -99,6 +99,13 @@ hr {
     font-weight: 600;
     background-color: var(--orange);
     color: white;
+    transition: 500ms;
+}
+
+#nav button:hover {
+    background-color: var(--white);
+    border: .5px solid rgba(0, 0, 0, 0.386);
+    color: var(--black);
 }
 
 #navItems ul {
