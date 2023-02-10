@@ -15,14 +15,21 @@ body,
 html {
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
 
+}
+
+#main {
+    width: 100%;
+    height: 100%;
 }
 
 #shortNav {
     width: 100%;
-    height: 40px;
+    height: 42px;
     background-color: var(--black);
+    /* border-bottom: 3px solid rgb(255, 21, 0); */
+    /* border-radius: 15px 15px 0px 0px; */
 }
 
 .timing {
@@ -52,16 +59,13 @@ html {
 #nav {
     display: flex;
     justify-content: space-between;
-    /* border: 2px solid red; */
     width: 100%;
-    position: absolute;
-    height: 80px;
+    position: relative;
+    height: 90px;
     padding: 10px 60px;
     align-items: center;
-    /* border-radius: 0px 0px 30px 30px; */
     box-shadow: 2px 2px 25px 0px rgba(0, 0, 0, 0.274);
     background: transparent;
-    position: fixed;
 }
 
 #navItems {
@@ -133,9 +137,6 @@ hr {
     left: 34%;
     border: 1px solid rgba(0, 0, 0, 0.062);
     background-color: white;
-    /* padding: 10px; */
-    /* display: flex;
-    flex-direction: column; */
     border-top: none;
     border-radius: 20px;
     box-shadow: 0.5px 3px 10px .5px rgba(0, 0, 0, 0.274);
@@ -144,7 +145,150 @@ hr {
 
 #navItems ul li ul li {
     padding: 18px 30px;
-    /* border: .5px solid rgba(0, 0, 0, 0.288); */
     border-radius: 10px;
-    /* margin-top: 8px; */
+    margin-top: 8px;
+}
+
+#frontView {
+    width: 100%;
+    height:85%;
+    /* border: 5px solid var(--orange); */
+    position: relative;
+    /* background-color: beige; */
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#innerFront {
+    width: 100%;
+    height: 80%;
+    background-color: beige;
+    border-radius: 20px;
+}
+
+#clientAndVideo {
+    display: flex;
+}
+
+#navRight {
+    position: absolute;
+    right: 4%;
+    display: flex;
+    flex-direction: column;
+    width: 22%;
+    height: 43%;
+    top: 62%;
+    background-color: rgb(94, 94, 94);
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    gap: 12px;
+
+}
+
+#navRight iframe {
+    border: none;
+    border-radius: 20px;
+    width: 90%;
+    margin-top: 15px;
+
+}
+
+#navRight input {
+    width: 85%;
+    border-radius: 10px;
+    border: none;
+    position: relative;
+    padding: 10px 30px;
+}
+
+#navRight button {
+    border: none;
+    padding: 13px 40px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 85%;
+    background-color: #FF5733;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 15px;
+}
+
+#navRight input::placeholder {
+    position: absolute;
+    left: 20px;
+}
+
+#ourClients {
+    width: 73%;
+    height: 13vh;
+    background-color: rgb(240, 240, 240);
+    border-radius: 20px;
+    position: relative;
+    overflow-x: scroll;
+    display: flex;
+    align-items: center;
+}
+
+#ourClients img {
+    width: 86px;
+    
+}
+
+#ourClients::-webkit-scrollbar {
+    display: none;
+}
+
+
+#clients {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    animation-name: companies;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+@keyframes companies {
+    0% {
+        transform: translateX(-145%);
+    }
+
+    100% {
+        transform: translateX(180%);
+    }
+}
+
+#ourClients {
+    z-index: -1;
+}
+
+.some {
+    background-color: rgb(240, 240, 240);
+    z-index: 999;
+    height: 100%;
+    /* margin-left: -10px; */
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    border-radius: 20px;
+    position: absolute;
+    /* border: 2px solid red; */
+}
+
+.some h1 {
+    white-space: nowrap;
+    opacity: .6;
+    font-size: 23px;
+    z-index: 21;
 }
