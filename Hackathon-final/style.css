@@ -1,0 +1,143 @@
+:root {
+    --black: #1C2833;
+    --orange: #FF5733;
+    --white : #fafafa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Gilroy;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+#shortNav {
+    width: 100%;
+    height: 40px;
+    background-color: var(--black);
+}
+
+.timing {
+    display: flex;
+    gap: 20px;
+    height: 100%;
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 10%;
+    top: 20px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.timing:nth-child(2) {
+    left: 28.5%;
+}
+
+.timing:nth-child(3) {
+    left:85%;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+    width: 100%;
+    position: absolute;
+    height: 80px;
+    padding: 10px 60px;
+    align-items: center;
+    /* border-radius: 0px 0px 30px 30px; */
+    box-shadow: 2px 2px 25px 0px rgba(0, 0, 0, 0.274);
+    background: transparent;
+    position: fixed;
+}
+
+#navItems {
+    display: flex;
+    gap: 20px;
+    
+}
+
+#navItems a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--black);
+    display: block;
+    transition: 300ms;
+}
+
+#navItems a:hover {
+    opacity: .8;
+    font-weight: 600;
+}
+
+
+hr {
+    width: 65%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 48%;
+    opacity: .4;
+}
+
+#nav button {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    background-color: var(--orange);
+    color: white;
+}
+
+#navItems ul {
+    display: flex;
+    gap: 60px;
+}
+
+#navItems ul li {
+    list-style-type: none;
+}
+
+#navItems ul ul {
+    display: none;
+}
+
+/* #navItems ul li:hover>ul {
+    display: inherit;
+} */
+
+#navItems ul li ul {
+    position: absolute;
+    top: 85%;
+    list-style: none;
+    text-align: left;
+    left: 34%;
+    border: 1px solid rgba(0, 0, 0, 0.062);
+    background-color: white;
+    /* padding: 10px; */
+    /* display: flex;
+    flex-direction: column; */
+    border-top: none;
+    border-radius: 20px;
+    box-shadow: 0.5px 3px 10px .5px rgba(0, 0, 0, 0.274);
+
+}
+
+#navItems ul li ul li {
+    padding: 18px 30px;
+    /* border: .5px solid rgba(0, 0, 0, 0.288); */
+    border-radius: 10px;
+    /* margin-top: 8px; */
+}
